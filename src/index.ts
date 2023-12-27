@@ -2,48 +2,60 @@
 // arrays
 //--------
 
-let names: string[] = ['Mario', 'Luigi', 'Peach'];
-let ages: number[] = [25,28,24];
+let names: string[] = ['mario', 'luigi', 'peach']
+let ages: number[] = [25, 28, 24]
 
-names.push('true');
-ages.push(35);
+// names.push(true)
+names.push('bowser')
 
-//---------------------------
+// ages.push('35')
+ages.push(30)
+
+//----------------------------
 // type inference with arrays
-//---------------------------
+//----------------------------
 
-let fruits = ['apples', 'mangos', 'bananas', 'pears'];
-fruits.push('peaches');
-const f = fruits[3];
+let fruits = ['apples', 'pears', 'bananas', 'mangos']
+
+// fruits.push(20)
+fruits.push('peaches')
+
+const f = fruits[3] // infers the type based on fruits type
 
 let things = [1, true, 'hello']
-const t = things[0]
+
+const t = things[0] // can be any of the types initially added
 
 //-----------------
-// objects literals
+// object literals
 //-----------------
 
-let user: {firstName: string, age: number, id: number, isFictional: boolean} = {
-    firstName:'Mario',
-    age: 24,
-    id: 181,
-    isFictional: true
-};
+let user: { firstName: string; age: number; id: number } = {
+	firstName: 'mario',
+	age: 30,
+	id: 1,
+	// isFictional: true
+}
 
-user.firstName = 'peach';
-user.id = 2;
+// user.name = 25
+// user.email = 'peach@netninja.dev'
+user.firstName = 'peach'
+user.id = 2
 
-//------------------------------------
+// destructuring from objects
+const { age, id }: { age: number; id: number } = user
+
+//-------------------------------------
 // type inference with object literals
-//------------------------------------
+//-------------------------------------
 
 let person = {
-    name: 'Luigi',
-    score: 35
-};
+	name: 'luigi',
+	score: 35,
+}
 
-person.name = 'Bowser';
-person.score = 24;
+// person.name = true
+// person.id = 3
+person.name = 'bowser'
 
-
-const score = person.score;
+const score = person.score // infers number type
