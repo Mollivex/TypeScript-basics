@@ -1,27 +1,48 @@
-// TYPE BASICS
+//------------------------
+// basic type annotations
+//------------------------
 
-let age: number = 30;
-let firstName: string = 'Mario';
-let isFictional: boolean;
+let age: number = 30
+let firstName: string = 'Mario'
+let isFictional: boolean
 
-age = 31;
+// age = 'hello'
+age = 31
 
-firstName = 'Luigi';
-isFictional = true;
+// firstName = 100
+firstName = 'Luigi'
 
-let planet = 'Earth';
-let moons = 1;
-let isLarge = false;
+// isFictional = 'false'
+isFictional = false
 
-planet = 'Saturn';
-moons = 145;
-isLarge = true;
+//----------------
+// type inference
+//----------------
 
+let planet = 'Earth'
+let moons = 1
+let isLarge = false
+
+// planet = 10
+planet = 'Saturn'
+
+// moons = '145'
+moons = 145
+
+// isLarge = 'yes'
+isLarge = true
+
+//------------------
 // null & undefined
-let something: null;
-let anotherThing: undefined;
+//------------------
 
-something = null;
-anotherThing = undefined;
+let something: null
+let anotherThing: undefined
+
+// something = 10
+something = null
+
+// anotherThing = 'hello, world'
+anotherThing = undefined
 
 
