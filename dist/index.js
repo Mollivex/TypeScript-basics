@@ -1,27 +1,25 @@
 "use strict";
-//---------
-// any type
-//---------
-let age;
-let title;
-age = 30;
-age = false;
-title = 25;
-title = {
-    hello: 'world'
-};
-//-------------------
-// any type in arrays
-//-------------------
-let things = ['hello', 25, true, null, undefined];
-things.push({ id: 123 });
+//-------
+// tuples
+//-------
+let person = ['Mario', 25, true];
 //----------------
-// functions & any
+// tuples examples
 //----------------
-function addTogether(value) {
-    return value + value;
+let hsla;
+hsla = [200, '100%', '50%', 100];
+let xy;
+xy = [94.2, 20.3];
+function useCoords() {
+    // get coords
+    const lat = 100;
+    const long = 50;
+    return [lat, long];
 }
-const resultOne = addTogether('hello');
-const resultTwo = addTogether(3);
-// useful when migratins from JS to TS
-// because using any won't cause errors initially
+const [lat, long] = useCoords();
+//-------------
+// named tuples
+//-------------
+let user;
+user = ['Peach', 25];
+console.log(user[0]);
