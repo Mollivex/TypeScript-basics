@@ -1,61 +1,32 @@
-//--------
-// arrays
-//--------
+//----------
+// functions
+//----------
 
-let names: string[] = ['mario', 'luigi', 'peach']
-let ages: number[] = [25, 28, 24]
+function addTwoNumbers(a:number, b:number): number {
+    return a + b;
+};
 
-// names.push(true)
-names.push('bowser')
+const substractTwoNumbers = (a: number, b: number): number => {
+    return a - b;
+};
 
-// ages.push('35')
-ages.push(30)
+addTwoNumbers(2, 4);
+substractTwoNumbers(10, 7);
 
-//----------------------------
-// type inference with arrays
-//----------------------------
+function addAllNumbers(items: number[]){
+    const total = items.reduce((a, c) => a + c, 0);
 
-let fruits = ['apples', 'pears', 'bananas', 'mangos']
+    console.log(total);
+};
 
-// fruits.push(20)
-fruits.push('peaches')
+addAllNumbers([5,7,9,11,3,2,1,100]);
 
-const f = fruits[3] // infers the type based on fruits type
+//-----------------------
+//  return type inference
+//-----------------------
 
-let things = [1, true, 'hello']
-
-const t = things[0] // can be any of the types initially added
-
-//-----------------
-// object literals
-//-----------------
-
-let user: { firstName: string; age: number; id: number } = {
-	firstName: 'mario',
-	age: 30,
-	id: 1,
-	// isFictional: true
+function formatGreeting(name: string, greeting: string): string {
+    return `${greeting}, ${name}`;
 }
 
-// user.name = 25
-// user.email = 'peach@netninja.dev'
-user.firstName = 'peach'
-user.id = 2
-
-// destructuring from objects
-const { age, id }: { age: number; id: number } = user
-
-//-------------------------------------
-// type inference with object literals
-//-------------------------------------
-
-let person = {
-	name: 'luigi',
-	score: 35,
-}
-
-// person.name = true
-// person.id = 3
-person.name = 'bowser'
-
-const score = person.score // infers number type
+const result = formatGreeting('mario', 'hello');
